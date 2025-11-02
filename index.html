@@ -3,79 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>صفحه شخصی من</title>
+  <title>صفحه شخصی PROFESSOR</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
 
     body {
       font-family: "Vazirmatn", sans-serif;
+      margin: 0;
+      padding: 0;
       background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: #fff;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 50px;
     }
 
-    .card {
+    .container {
+      width: 90%;
+      max-width: 900px;
       background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
       border-radius: 20px;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      padding: 30px;
+      text-align: center;
       transition: transform 0.3s;
     }
 
-    .card:hover {
-      transform: scale(1.05);
+    .container:hover {
+      transform: scale(1.02);
     }
 
-    .card img {
+    .profile-img {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      margin-bottom: 20px;
       border: 3px solid #fff;
+      margin-bottom: 15px;
     }
 
     h1 {
       margin: 10px 0;
-      font-size: 26px;
+      font-size: 28px;
     }
 
-    p {
-      margin: 5px 0;
-      font-size: 16px;
-    }
-
-    a {
-      color: #fff;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    a:hover {
+    h2 {
+      margin: 10px 0 20px 0;
+      font-size: 20px;
+      font-weight: normal;
       color: #ffd700;
     }
 
-    .email-button {
-      display: inline-block;
+    p {
+      font-size: 16px;
       margin: 10px 0;
-      padding: 10px 20px;
-      background: #ffd700;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
     }
 
-    .email-button:hover {
-      background: #e5c100;
+    .section-title {
+      font-size: 22px;
+      margin: 20px 0 10px 0;
+      color: #ffd700;
+    }
+
+    .projects, .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .project, .skill {
+      background: rgba(255,255,255,0.2);
+      padding: 10px 20px;
+      border-radius: 10px;
+      min-width: 100px;
+      transition: transform 0.3s;
+    }
+
+    .project:hover, .skill:hover {
+      transform: scale(1.1);
+      background: rgba(255,255,255,0.35);
     }
 
     .social-icons {
@@ -96,7 +106,6 @@
       color: #fff;
       font-size: 20px;
       transition: 0.3s;
-      direction: ltr;
     }
 
     .social-icons a:hover {
@@ -104,28 +113,127 @@
       color: #000;
     }
 
-    .twitter { background: #1DA1F2; color: #fff; }
-    .instagram { background: #E1306C; color: #fff; }
-    .telegram { background: #0088cc; color: #fff; }
+    .email-button {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 10px 20px;
+      background: #ffd700;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
+    .email-button:hover {
+      background: #e5c100;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .language-switch img {
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      border: 2px solid #fff;
+      border-radius: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .projects, .skills {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/sirvanprofessor-beep/THATSCARDINAL/main/IMG_4716.PNG" alt="PROFESSOR">
+  <!-- Language Switch -->
+  <div class="language-switch">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Iran_%281921%E2%80%931979%29.svg" id="fa-btn" title="فارسی">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" id="en-btn" title="English">
+  </div>
 
-    <h1>من PROFESSOR هستم</h1>
-    <p>این صفحه‌ی شخصی من در GitHub Pages است.</p>
+  <div class="container" id="fa-content">
+    <img class="profile-img" src="https://raw.githubusercontent.com/sirvanprofessor-beep/THATSCARDINAL/main/IMG_4716.PNG" alt="PROFESSOR">
+    <h1>ادیتور ویدیو و عکس</h1>
+    <h2>به سوی بینهایت و فراتر از آن</h2>
 
-    <!-- ایمیل به صورت دکمه -->
     <a class="email-button" href="mailto:sirvanprofessor@gmail.com">📧 ارسال ایمیل به من</a>
 
-    <p>🔗 <a href="https://github.com/sirvanprofessor-beep" target="_blank">گیت‌هاب من</a></p>
+    <div class="section-title">پروژه‌ها</div>
+    <div class="projects">
+      <div class="project">پروژه ۱</div>
+      <div class="project">پروژه ۲</div>
+      <div class="project">پروژه ۳</div>
+    </div>
+
+    <div class="section-title">مهارت‌ها</div>
+    <div class="skills">
+      <div class="skill">ادیت ویدیو</div>
+      <div class="skill">ادیت عکس</div>
+      <div class="skill">Adobe Premiere</div>
+      <div class="skill">Photoshop</div>
+    </div>
 
     <div class="social-icons">
-      <a href="https://www.instagram.com/thatscardinal?igsh=em5rMGRnNzM0eGNo&utm_source=qr" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://t.me/onesecondloop" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://www.instagram.com/thatscardinal?igsh=em5rMGRnNzM0eGNo&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/onesecondloop" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://github.com/sirvanprofessor-beep" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </div>
+
+  <div class="container" id="en-content" style="display:none; direction:ltr; text-align:left;">
+    <img class="profile-img" src="https://raw.githubusercontent.com/sirvanprofessor-beep/THATSCARDINAL/main/IMG_4716.PNG" alt="PROFESSOR">
+    <h1>Video & Photo Editor</h1>
+    <h2>To infinity and beyond</h2>
+
+    <a class="email-button" href="mailto:sirvanprofessor@gmail.com">📧 Email Me</a>
+
+    <div class="section-title">Projects</div>
+    <div class="projects">
+      <div class="project">Project 1</div>
+      <div class="project">Project 2</div>
+      <div class="project">Project 3</div>
+    </div>
+
+    <div class="section-title">Skills</div>
+    <div class="skills">
+      <div class="skill">Video Editing</div>
+      <div class="skill">Photo Editing</div>
+      <div class="skill">Adobe Premiere</div>
+      <div class="skill">Photoshop</div>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/thatscardinal?igsh=em5rMGRnNzM0eGNo&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/onesecondloop" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://github.com/sirvanprofessor-beep" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <script>
+    const faBtn = document.getElementById('fa-btn');
+    const enBtn = document.getElementById('en-btn');
+    const faContent = document.getElementById('fa-content');
+    const enContent = document.getElementById('en-content');
+
+    faBtn.addEventListener('click', () => {
+      faContent.style.display = 'block';
+      enContent.style.display = 'none';
+    });
+
+    enBtn.addEventListener('click', () => {
+      faContent.style.display = 'none';
+      enContent.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
