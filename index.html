@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه شخصی من</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+      border: 3px solid #fff;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 26px;
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #ffd700;
+    }
+
+    .email-button {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background: #ffd700;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .email-button:hover {
+      background: #e5c100;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 20px;
+      transition: 0.3s;
+      direction: ltr;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #000;
+    }
+
+    .twitter { background: #1DA1F2; color: #fff; }
+    .instagram { background: #E1306C; color: #fff; }
+    .telegram { background: #0088cc; color: #fff; }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sirvanprofessor-beep/THATSCARDINAL/main/IMG_4716.PNG" alt="PROFESSOR">
+
+    <h1>من PROFESSOR هستم</h1>
+    <p>این صفحه‌ی شخصی من در GitHub Pages است.</p>
+
+    <!-- ایمیل به صورت دکمه -->
+    <a class="email-button" href="mailto:sirvanprofessor@gmail.com">📧 ارسال ایمیل به من</a>
+
+    <p>🔗 <a href="https://github.com/sirvanprofessor-beep" target="_blank">گیت‌هاب من</a></p>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/thatscardinal?igsh=em5rMGRnNzM0eGNo&utm_source=qr" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/onesecondloop" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+  </div>
+</body>
+</html>
